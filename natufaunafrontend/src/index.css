@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-  background-image: url("src/assets/background.webp");
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  background: url("src/assets/background.webp");
 }

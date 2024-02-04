@@ -35,7 +35,7 @@ public class UserController {
         user.setUserRole("USER");
         userService.save(user);
         response.put("Route", "/");
-        response.put("Error", "");
+        response.put("Error", null);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
@@ -60,16 +60,12 @@ public class UserController {
                 return new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
             }
         }else {
-            response.put("Route", "/register");
+            response.put("Route", "/regist");
             response.put("User", null);
-            response.put("Error", "");
+            response.put("Error", null);
             return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
         }
-        if(user.getUserRole().equals("USER")) {
-            response.put("Route", "/menu");
-        }else {
-            response.put("Route", "/admin/products");
-        }
+        response.put("Route", "/");
         response.put("User", user);
         response.put("Error", null);
         return new ResponseEntity<>(response, HttpStatus.OK);
