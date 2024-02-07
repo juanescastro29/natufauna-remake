@@ -162,7 +162,7 @@ const Login = () => {
               </div>
             ) : (
               <motion.button
-                className="bg-green-600/100 rounded-md shadow-lg text-white h-8 w-20 md:h-9 md:w-24 text-sm md:text-base items-center justify-center"
+                className="bg-green-600/100 rounded-full shadow-lg text-white h-9 w-28 text-sm md:text-base items-center justify-center"
                 whileHover={{
                   scale: 1.1,
                 }}

@@ -12,6 +12,14 @@ import ScrollToTop from "./components/ScrollToTop";
 import Regist from "./pages/Regist";
 import AdminProvider from "./context/AdminContext";
 import UserProvider from "./context/UserContext";
+import PrivateRouteUser from "./components/PrivateRouteUser";
+import PrivateRouteAdmin from "./components/PrivateRouteAdmin";
+import MyAdoptions from "./pages/User/MyAdoptions";
+import MySponsorships from "./pages/User/MySponsorships";
+import MyDonations from "./pages/User/MyDonations";
+import AdminAdoptions from "./pages/Admin/AdminAdoptions";
+import AdminSponsorships from "./pages/Admin/AdminSponsorship";
+import AdminDonations from "./pages/Admin/AdminDonations";
 
 const App = () => {
   return (
@@ -21,7 +29,9 @@ const App = () => {
           <BrowserRouter>
             <ScrollToTop />
             <Navbar />
-            <Toaster toastOptions={{ duration: 3000, position: "bottom-right" }} />
+            <Toaster
+              toastOptions={{ duration: 3000, position: "bottom-right" }}
+            />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/adoptions" element={<Adoptions />} />
@@ -29,6 +39,54 @@ const App = () => {
               <Route path="/donations" element={<Donations />} />
               <Route path="/login" element={<Login />} />
               <Route path="/regist" element={<Regist />} />
+              <Route
+                path="/myAdoptions"
+                element={
+                  <PrivateRouteUser>
+                    <MyAdoptions />
+                  </PrivateRouteUser>
+                }
+              />
+              <Route
+                path="/mySponsorships"
+                element={
+                  <PrivateRouteUser>
+                    <MySponsorships />
+                  </PrivateRouteUser>
+                }
+              />
+              <Route
+                path="/myDonations"
+                element={
+                  <PrivateRouteUser>
+                    <MyDonations />
+                  </PrivateRouteUser>
+                }
+              />
+              <Route
+                path="/adminAdoptions"
+                element={
+                  <PrivateRouteAdmin>
+                    <AdminAdoptions />
+                  </PrivateRouteAdmin>
+                }
+              />
+              <Route
+                path="/adminSponsorships"
+                element={
+                  <PrivateRouteAdmin>
+                    <AdminSponsorships />
+                  </PrivateRouteAdmin>
+                }
+              />
+              <Route
+                path="/adminDonations"
+                element={
+                  <PrivateRouteAdmin>
+                    <AdminDonations />
+                  </PrivateRouteAdmin>
+                }
+              />
               <Route path="/*" element={<NotFound />} />
             </Routes>
             <Footer />

@@ -23,11 +23,11 @@ const Navbar = () => {
       window.localStorage.removeItem("user");
       setSession(false);
       setUser(null);
-      toast.success("Logout successfull!")
+      toast.success("Logout successfull!");
     } else {
       window.localStorage.removeItem("adminSession");
       setAdminSession(false);
-      toast.success("Logout successfull!")
+      toast.success("Logout successfull!");
     }
   }
 
@@ -90,8 +90,8 @@ const Navbar = () => {
             <li>
               <Link
                 to="/"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/" ? "text-green-700/90" : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/" ? "text-green-500" : ""
                 }`}
               >
                 Home
@@ -100,8 +100,8 @@ const Navbar = () => {
             <li>
               <Link
                 to="/adoptions"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/adoptions" ? "text-green-700/90" : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/adoptions" ? "text-green-500" : ""
                 }`}
               >
                 Adoptions
@@ -110,10 +110,8 @@ const Navbar = () => {
             <li>
               <Link
                 to="/sponsorships"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/sponsorships"
-                    ? "text-green-700/90"
-                    : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/sponsorships" ? "text-green-500" : ""
                 }`}
               >
                 Sponsorships
@@ -122,8 +120,8 @@ const Navbar = () => {
             <li>
               <Link
                 to="/donations"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/donations" ? "text-green-700/90" : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/donations" ? "text-green-500" : ""
                 }`}
               >
                 Donations
@@ -146,10 +144,8 @@ const Navbar = () => {
             >
               <Link
                 to="/myAdoptions"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/myAdoptions"
-                    ? "text-green-700/90"
-                    : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/myAdoptions" ? "text-green-500" : ""
                 }`}
               >
                 My Adoptions
@@ -163,9 +159,9 @@ const Navbar = () => {
             >
               <Link
                 to="/mySponsorships"
-                className={`hover:text-green-700/90 ${
+                className={`hover:text-green-500 ${
                   location.pathname === "/mySponsorships"
-                    ? "text-green-700/90"
+                    ? "text-green-500"
                     : ""
                 }`}
               >
@@ -180,10 +176,8 @@ const Navbar = () => {
             >
               <Link
                 to="/myDonations"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/myDonations"
-                    ? "text-green-700/90"
-                    : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/myDonations" ? "text-green-500" : ""
                 }`}
               >
                 My Donations
@@ -206,8 +200,8 @@ const Navbar = () => {
             >
               <Link
                 to="/"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/" ? "text-green-700/90" : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/" ? "text-green-500" : ""
                 }`}
               >
                 Home
@@ -221,8 +215,8 @@ const Navbar = () => {
             >
               <Link
                 to="/adoptions"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/adoptions" ? "text-green-700/90" : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/adoptions" ? "text-green-500" : ""
                 }`}
               >
                 Adoptions
@@ -236,10 +230,8 @@ const Navbar = () => {
             >
               <Link
                 to="/sponsorships"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/sponsorships"
-                    ? "text-green-700/90"
-                    : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/sponsorships" ? "text-green-500" : ""
                 }`}
               >
                 Sponsorships
@@ -253,8 +245,8 @@ const Navbar = () => {
             >
               <Link
                 to="/donations"
-                className={`hover:text-green-700/90 ${
-                  location.pathname === "/donations" ? "text-green-700/90" : ""
+                className={`hover:text-green-500 ${
+                  location.pathname === "/donations" ? "text-green-500" : ""
                 }`}
               >
                 Donations
@@ -264,7 +256,7 @@ const Navbar = () => {
         </motion.div>
         <div className="flex flex-row gap-4 justify-center items-center w-auto z-10">
           <Tooltip
-            className="bg-green-400"
+            className="bg-green-400 hidden md:flex"
             content="Initial menu"
             placement="bottom"
             animate={{
@@ -320,7 +312,7 @@ const Navbar = () => {
               {session ? (
                 <>
                   <Tooltip
-                    className="bg-green-400"
+                    className="bg-green-400 hidden md:flex"
                     content="Menu user"
                     placement="bottom"
                     animate={{
@@ -333,7 +325,7 @@ const Navbar = () => {
                     </button>
                   </Tooltip>
                   <Tooltip
-                    className="bg-green-400"
+                    className="bg-green-400 hidden md:flex"
                     content="Logout"
                     placement="bottom"
                     animate={{

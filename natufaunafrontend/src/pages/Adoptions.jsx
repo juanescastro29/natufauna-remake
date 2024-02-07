@@ -91,7 +91,7 @@ const Adoptions = () => {
                             ))}
                           </AnimatePresence>
                         </div>
-                        <div className="flex justify-center items-center px-8 py-2 text-base md:text-lg bg-green-500 text-white rounded-full shadow-lg">
+                        <div className="flex justify-center items-center px-8 py-2 text-base bg-green-500 text-white rounded-full shadow-lg">
                           <div className="join" data-theme="corporate">
                             <button
                               className="join-item btn mr-2 text-base md:text-xl"
@@ -123,7 +123,7 @@ const Adoptions = () => {
                             There are no more pets available for adoption.
                           </h1>
                         </div>
-                        <div className="flex justify-center items-center px-8 py-2 text-base md:text-lg bg-green-500 text-white rounded-full shadow-lg">
+                        <div className="flex justify-center items-center px-8 py-2 bg-green-500 text-base text-white rounded-full shadow-lg">
                           <div className="join" data-theme="corporate">
                             <button
                               className="join-item btn mr-2 text-base md:text-xl"
